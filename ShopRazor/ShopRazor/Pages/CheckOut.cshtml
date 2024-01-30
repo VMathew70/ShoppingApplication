@@ -1,0 +1,46 @@
+﻿@page
+@model ShopRazor.Pages.CheckOutModel
+@{
+}
+
+@{
+    ViewData["Title"] = "Payment";
+}
+<h2>Payment</h2>
+
+    
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Customer</label>
+        <input asp-for="customer.customername" class="from-label" />
+        <span asp-validation-for="customer.customername" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">email</label>
+        <input asp-for="customer.email" class="from-label" />
+        <span asp-validation-for="customer.email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">cardnumber</label>
+        <input asp-for="customer.cardnumber" class="from-label" />
+        <span asp-validation-for="customer.cardnumber" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CVC</label>
+        <input asp-for="customer.cvc" class="from-label" />
+        <span asp-validation-for="customer.cvc" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">ExpiryDate</label>
+        <input asp-for="customer.expirydate" class="from-label" />
+        <span asp-validation-for="customer.expirydate" class="text-danger"></span>
+    </div>      
+
+    <input type=submit value="Create" class="btn btn-primary" />           
+
+</form>
+
+    
+
+
+

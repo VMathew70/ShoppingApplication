@@ -1,0 +1,52 @@
+﻿@page
+@model ShopRazor.Pages.ViewCartModel
+@{
+}
+@{
+     ViewData["Title"] = "Cart View";
+}
+<h2>Cart Summary</h2>
+@if (Model.cartViewModel.CartItems.Count > 0)
+{
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>-</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.cartViewModel.CartItems)
+        {
+        <tr>
+                <td>@item.ProductName</td>
+                <td>
+                <div class="col-4">
+                    <img src="/images/@item.Image" height="100" width="100" alt="" />
+                </div>
+                </td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("C2")</td>
+                <td>@Model.cartViewModel.CartItems.Where(x => x.ProductId == item.ProductId).Sum(x => x.Quantity * x.Price).ToString("C2")</td>
+                <td>                    
+                    <a class="btn btn-success" asp-page="Cart" asp-page-handler="Buy" asp-route-id="@item.ProductId">+</a>
+                    <a class="btn btn-success" asp-page="Cart" asp-page-handler="Remove" asp-route-id=@item.ProductId>-</a>
+                </td>
+        </tr>
+        }
+        <tr>
+            <td class="text-right">Grand Total :@Model.cartViewModel.GrandTotal.ToString("C2")</td>
+        </tr>
+        <tr>
+            <td class="text-right">
+                <a class="btn btn-success" asp-page="CheckOut" asp-page-handler="Get">Checkout</a>
+            </td>
+        </tr>
+
+    </table>
+}
+else
+{
+    
+}

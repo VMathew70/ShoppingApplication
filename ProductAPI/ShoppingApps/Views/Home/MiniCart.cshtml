@@ -1,0 +1,15 @@
+﻿@model MiniCartViewModel
+
+if (Model != null)
+{
+<p>Items in Cart: <span class="badge badge-primary">@Model.NumberofProducts</span></p>
+<p>Total: <b>@Model.TotalAmount</b></p>
+<a href="#" class="btn btn-primary">View Cart</a>
+<a href="#" class="btn btn-danger">Clear Cart</a>
+}
+else
+{
+    <p class="lead m-0">Your cart in empty</p>
+}
+
+

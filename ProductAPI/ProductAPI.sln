@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI", "ProductAPI\ProductAPI.csproj", "{B3DE92DE-40C1-4F71-9ABF-3E5C3FAAC89A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingApps", "ShoppingApps\ShoppingApps.csproj", "{A8441752-EA29-4A03-9894-028A188EB7A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3DE92DE-40C1-4F71-9ABF-3E5C3FAAC89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DE92DE-40C1-4F71-9ABF-3E5C3FAAC89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DE92DE-40C1-4F71-9ABF-3E5C3FAAC89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DE92DE-40C1-4F71-9ABF-3E5C3FAAC89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8441752-EA29-4A03-9894-028A188EB7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8441752-EA29-4A03-9894-028A188EB7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8441752-EA29-4A03-9894-028A188EB7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8441752-EA29-4A03-9894-028A188EB7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {121D4D5B-B277-4B63-BBC9-261721B6E25E}
+	EndGlobalSection
+EndGlobal

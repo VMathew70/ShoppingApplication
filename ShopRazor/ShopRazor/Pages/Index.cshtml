@@ -1,0 +1,28 @@
+﻿@page
+@model ShopRazor.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+    <p>Enjoy shopping</p>
+</div>
+<div class="row">
+    @foreach (var item in Model.productList)
+    {
+        <div class="col-4">
+            <img src="/images/@item.image" height="100" width="100" alt="" />
+        </div>
+        <h4>@item.productname</h4>
+        <div>
+            @item.productdesc
+        </div>
+        <p>@item.price.ToString("C2")</p>
+        <p>
+            <a class="btn btn-success" asp-page="Cart" asp-page-handler="Buy" asp-route-id="@item.id">Add to Cart</a>
+        </p>
+    }
+
+</div>

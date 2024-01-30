@@ -1,0 +1,49 @@
+﻿@model CartViewModel
+
+@{
+     ViewData["Title"] = "Cart View";
+}
+@if (Model.CartItems.Count > 0)
+{
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>-</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        @foreach(var item in Model.CartItems)
+        {
+        <tr>
+                <td>@item.ProductName</td>
+                <td>
+                    <div class="col-4">
+                        <img src="/images/@item.Image" height="100" width="100" alt="" />
+                    </div>
+                </td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("C2")</td>
+                <td>@Model.CartItems.Where(x => x.ProductId == item.ProductId).Sum(x => x.Quantity * x.Price).ToString("C2")</td>
+                <td>
+                    <a class="btn btn-success" asp-action="Add" asp-route-id=@item.ProductId>+</a>
+                    <a class="btn btn-success" asp-action="Remove" asp-route-id=@item.ProductId>-</a>
+                </td>
+        </tr>
+        }
+        <tr>
+            <td class="text-right">Grand Total :@Model.GrandTotal.ToString("C2")</td>
+        </tr>
+        <tr>
+            <td class="text-right">
+                <a class="btn btn-success" asp-action="CheckOut">Checkout</a>
+            </td>
+        </tr>
+
+    </table>
+}
+else
+{
+    
+}
