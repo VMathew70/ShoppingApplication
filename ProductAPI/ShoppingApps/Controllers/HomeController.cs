@@ -35,7 +35,7 @@ namespace ShoppingApps.Controllers
                 string result = httpResponseMessage.Content.ReadAsStringAsync().Result;
                 productList = JsonConvert.DeserializeObject<List<Product>>(result);
             }
-
+            TempData["Success"] = "";
             return View(productList);
         }
 

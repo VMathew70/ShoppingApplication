@@ -47,3 +47,11 @@ else
 {
     
 }
+<div class="text-center">
+    @if (TempData["StockNotAvailable"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["StockNotAvailable"]
+        </div>
+    }
+</div>

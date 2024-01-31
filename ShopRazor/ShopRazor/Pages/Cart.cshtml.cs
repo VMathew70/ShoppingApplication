@@ -53,7 +53,7 @@ namespace ShopRazor.Pages
                 }
                 else
                 {
-                    TempData["Success"] = "Stock not available";
+                    TempData["StockNotAvailable"] = "Stock not available";
 
                 }
             }
@@ -88,7 +88,7 @@ namespace ShopRazor.Pages
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            TempData["Success"] = "Product Removed";
+            //TempData["Success"] = "Product Removed";
             return Redirect(Request.Headers["Referer"].ToString());
         }
 

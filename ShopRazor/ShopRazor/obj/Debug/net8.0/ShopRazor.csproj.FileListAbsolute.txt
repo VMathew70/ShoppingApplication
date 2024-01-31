@@ -31,3 +31,4 @@ C:\MethodWorx\ShopRazor\ShopRazor\obj\Debug\net8.0\ref\ShopRazor.dll
 C:\MethodWorx\ShopRazor\ShopRazor\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\MethodWorx\ShopRazor\ShopRazor\obj\Debug\net8.0\ShopRazor.csproj.AssemblyReference.cache
 C:\MethodWorx\ShopRazor\ShopRazor\obj\Debug\net8.0\ShopRazor.csproj.CopyComplete
+C:\MethodWorx\ShopRazor\ShopRazor\obj\Debug\net8.0\ShopRazor.sourcelink.json

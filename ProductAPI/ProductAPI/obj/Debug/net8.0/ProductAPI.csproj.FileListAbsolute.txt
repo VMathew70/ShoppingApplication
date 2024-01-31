@@ -72,3 +72,4 @@ C:\MethodWorx\ProductAPI\ProductAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.d
 C:\MethodWorx\ProductAPI\ProductAPI\bin\Debug\net8.0\MailKit.dll
 C:\MethodWorx\ProductAPI\ProductAPI\bin\Debug\net8.0\MimeKit.dll
 C:\MethodWorx\ProductAPI\ProductAPI\bin\Debug\net8.0\appsettings.Production.json
+C:\MethodWorx\ProductAPI\ProductAPI\obj\Debug\net8.0\ProductAPI.sourcelink.json

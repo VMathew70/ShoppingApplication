@@ -28,12 +28,12 @@ delete from orderheader
 delete from orderdetail
 
 select * from orderheader
-select * from orderdetail
+select * from orderdetail-- where ordernumber='c696be82-3703-4f3d-9771-2535f3117bcd'
 select * from Products
 update products set image='laptop.jpeg' where id in (1,3,5)
 update products set image='battery.jpeg' where id in (2,4,6)
 
-update products set quantity=20
+update products set quantity=10
 delete from products
 insert into products values('Lenova','Lenova Laptop',100,629.99);
 insert into products values('Lenova Battery','Lenova Battery',100,119.99);

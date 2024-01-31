@@ -68,9 +68,9 @@ namespace ShoppingApps.Controllers
                     MailRequest mailRequest = new MailRequest();
                     mailRequest.ToEmail = customer.email;
                     mailRequest.Subject = "Your Shopping Order";
-                    mailRequest.Body = "Dear " + customer.customername+ Environment.NewLine +
-                                       "Thanks for your order " + ordernumber+ Environment.NewLine+
-                                        "Kind Regards" + Environment.NewLine +
+                    mailRequest.Body = "Dear " + customer.customername+ Environment.NewLine + Environment.NewLine +
+                                       "Thanks for your order " + ordernumber+ Environment.NewLine+ Environment.NewLine +
+                                        "Kind Regards" + Environment.NewLine + Environment.NewLine +
                                         "Customer Services";
 
                     var mailrequest = JsonConvert.SerializeObject(mailRequest);
@@ -134,11 +134,11 @@ namespace ShoppingApps.Controllers
 
                     HttpContext.Session.SetJson("Cart", cart);
 
-                    TempData["Success"] = "Product added";
+                    //TempData["Success"] = "Product added";
                 }
                 else
                 {
-                    TempData["Success"] = "Stock not available";
+                    TempData["StockNotAvailable"] = "Stock not available";
 
                 }
             }
@@ -174,7 +174,7 @@ namespace ShoppingApps.Controllers
                 HttpContext.Session.SetJson("Cart", cart);
             }
 
-            TempData["Success"] = "Product Removed";
+            //TempData["Success"] = "Product Removed";
             return Redirect(Request.Headers["Referer"].ToString());
         }
         public IActionResult Clear()
